@@ -154,7 +154,7 @@ async function displayResults(hits) {
             <p><strong>Plats:</strong> ${city} ${hit.workplace_address?.region || ''}</p>
             <p><strong>Beskrivning:</strong> 
             ${hit.description.text
-                ? hit.description.text.substring(0, 500) + '... <a title="Öppna anonsen på arbetsförmedlingen.se" target="_blank" href="https://arbetsformedlingen.se/platsbanken/annonser/${hit.id}"><span>Läs mer</span></a>'
+                ? hit.description.text.substring(0, 500) + `... <a title="Öppna anonsen på arbetsförmedlingen.se" target="_blank" href=https://arbetsformedlingen.se/platsbanken/annonser/${hit.id}><span>Läs mer</span></a>`
                 : 'Ingen beskrivning tillgänglig'
             }
             </p>
