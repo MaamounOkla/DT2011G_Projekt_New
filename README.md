@@ -17,6 +17,7 @@ You can try the live demo [here](https://workify-projekt-dt211g-maok1900.netlify
 ---
 ## installation
 Run `npm install` to install Parcel and all dependencies.
+
 if SASS is not installed globally on your device, run `npm install -g sass`.
 ## Development server
 
