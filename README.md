@@ -6,7 +6,7 @@ Author: [Maamoun Okla]
 
 ## Description
 
-This project is a web application that integrates data from the Jobsearch API and OpenStreetMap API. It fetches job listings based on user search input, displays job details, and shows the location on a map. It also gives a calculated distance between the user location and the job location. 
+This project is a frontend web application that integrates data from the Jobsearch API and OpenStreetMap API. It fetches job listings based on user search input, displays job details, and shows the location on a map. It also gives a calculated distance between the user location and the job location. 
 
 ---
 
