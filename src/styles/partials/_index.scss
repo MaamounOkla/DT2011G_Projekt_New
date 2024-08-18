@@ -1,0 +1,79 @@
+@use "../base";
+
+.intro {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  color: base.$text-color-primary;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(
+      to top,
+      rgba(89, 63, 255, 0.355),
+      rgba(0, 20, 71, 0.996)
+    ),
+    url("../assets/office.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 5rem 3rem;
+}
+
+.left-container {
+  width: 40%;
+  min-width: 700px;
+  box-shadow: 0px 0px 15px 3px base.$shadow-color-secondary;
+  background: base.$secondary-color;
+  margin-left: 10%;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+
+  // Länk-styling
+  a {
+    padding: 0.5rem 1rem;
+    background-color: base.$button-background;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      padding: 0.6rem 1.1rem;
+    }
+  }
+}
+.bouncing-icon {
+  display: inline-block;  
+  animation: bounce 1s infinite;  
+  margin-right: 5px;  
+  font-size: 1.2rem; 
+}
+// Responsiv design för mindre skärmar
+@media screen and (max-width: 768px) {
+  .hero {
+    margin: 0;
+    height: 100vh;
+    padding: 5rem 1rem; 
+     background-attachment: initial;
+  }
+
+  .left-container {
+    min-width: auto;
+    width: 100%;
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+}

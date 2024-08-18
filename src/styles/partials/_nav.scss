@@ -1,0 +1,114 @@
+//imports
+@use "../base";
+@use "../mixins" as c;
+@use "../keyframes";
+
+// nav-styling
+nav {
+  background-color: base.$secondary-color;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 20000;
+  height: 10vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+
+  &.slide-up {
+    animation: slide-up 0.3s forwards;
+  }
+
+  &.slide-down {
+    animation: slide-down 0.3s forwards;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+
+      a {
+        text-decoration: none;
+        color: base.$primary-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: base.$primary-color;
+    margin: 5px 0;
+    transition: all 0.3s;
+  }
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: opacity 0.3s ease-in-out;
+
+  &.fade-in {
+    animation: fade-in 0.3s forwards;
+    opacity: 1;
+  }
+
+  &.fade-out {
+    animation: fade-out 0.3s forwards;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    background-color: base.$secondary-color;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem 4rem;
+    @include c.flex-left-vertical;
+
+    ul {
+      @include c.flex-left-vertical;
+      padding: 0;
+    }
+    li {
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+  }
+
+  .nav.active {
+    display: flex;
+  }
+}

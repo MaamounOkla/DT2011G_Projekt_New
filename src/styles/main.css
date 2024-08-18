@@ -1,0 +1,457 @@
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.95;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 0.95;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes circle-motion {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(0px, 5px);
+  }
+  50% {
+    transform: translate(5px, 5px);
+  }
+  75% {
+    transform: translate(5px, 0);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+nav {
+  background-color: rgb(8, 0, 53);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 20000;
+  height: 10vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+nav.slide-up {
+  animation: slide-up 0.3s forwards;
+}
+nav.slide-down {
+  animation: slide-down 0.3s forwards;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #eff8ff;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #eff8ff;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: opacity 0.3s ease-in-out;
+}
+.nav.fade-in {
+  animation: fade-in 0.3s forwards;
+  opacity: 1;
+}
+.nav.fade-out {
+  animation: fade-out 0.3s forwards;
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav {
+    display: none;
+    background-color: rgb(8, 0, 53);
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1rem 4rem;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+  }
+  .nav ul {
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .nav li {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  .nav.active {
+    display: flex;
+  }
+}
+.footer {
+  background: rgb(8, 0, 53);
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer a {
+  color: #eff8ff;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-info {
+  color: #eff8ff;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(to top, rgba(89, 63, 255, 0.355), rgba(0, 20, 71, 0.996)), url("../assets/office.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 5rem 3rem;
+}
+
+.left-container {
+  width: 40%;
+  min-width: 700px;
+  box-shadow: 0px 0px 15px 3px #f5e173;
+  background: rgb(8, 0, 53);
+  margin-left: 10%;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+}
+.left-container a {
+  padding: 0.5rem 1rem;
+  background-color: #ABFF5C;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+.left-container a:hover {
+  padding: 0.6rem 1.1rem;
+}
+
+.bouncing-icon {
+  display: inline-block;
+  animation: bounce 1s infinite;
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    margin: 0;
+    height: 100vh;
+    padding: 5rem 1rem;
+    background-attachment: initial;
+  }
+  .left-container {
+    min-width: auto;
+    width: 100%;
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .intro {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+}
+.find-job-container {
+  min-height: 100vh;
+  background: linear-gradient(to top, rgba(0, 36, 129, 0.996), rgba(89, 63, 255, 0.355)), url("../assets/office.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 4rem 0;
+}
+
+#results {
+  margin-top: 20px;
+}
+#results .job {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px 3px rgba(212, 228, 255, 0.782);
+  color: #000917;
+}
+#results .job h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+#results .job p {
+  margin: 10px 0;
+}
+#results .job a {
+  text-decoration: none;
+  color: #000917;
+}
+#results .job a:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  height: 400px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+span {
+  font-weight: bold;
+  color: rgb(8, 0, 53);
+}
+
+#loadMore {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ABFF5C;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+#loadMore:hover {
+  background-color: #ABFF5C;
+  scale: 1.1;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  height: 50vh;
+  background: #fff;
+  z-index: 1000;
+}
+
+.loading-circle {
+  width: 100px;
+  height: 100px;
+  border: 20px solid transparent;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.circle-animation {
+  animation: circle-motion 2s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .find-job-container {
+    background-image: none;
+    background: #00005A;
+  }
+}
+body {
+  background-color: #89cbff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 120%;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 2.2;
+  background-color: #fff;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+}
+
+.logo {
+  flex: 0.3;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  animation: slide-in-left 2s ease-out;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #00005A;
+  border-radius: 1rem;
+}
+.container input[type=text] {
+  width: calc(40% - 22px);
+  min-width: 200px;
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ABFF5C;
+  cursor: pointer;
+  font-size: 16px;
+}
+.container button:hover {
+  background-color: #b8fc78;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+  img {
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

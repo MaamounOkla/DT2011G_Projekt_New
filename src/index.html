@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workify</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/main.js" type="module"></script>
+    <!-- Leaflet CSS för Karta -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS för Karta -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Font Awesome Kit för ikoner -->
+    <script src="https://kit.fontawesome.com/580c2ac5ba.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav class="nav" id="nav">
+                <h1 class="logo">Workify</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="findJobs.html">Sök jobb </a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="intro">
+            <h1>Välkommen till Workify, Din Nya platsbank!</h1>
+            <p>Upptäck den nya funktionen "Hitta Jobb på Karta <i style="color: #ff5c5c;" class="bouncing-icon fa-solid fa-location-dot"></i>"</p>
+        </div>
+        <div class="left-container">
+            <h2>Jobbsökning</h2>
+            <h3>Lediga jobb för hela Sverige</h3>
+            <h2>En Innovativ Plattform för Ditt Arbetsliv</h2>
+            <a href="findJobs.html">Sök Jobb <i class="bouncing-icon fa-solid fa-up-right-from-square"></i></a>
+            <p>Förenkla din jobbsökning med vår nya kartfunktion.</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Om Oss Sektion -->
+        <section class="about-us" id="about">
+            <div class="container">
+                <h2>Om Oss</h2>
+                <p>Välkommen till vår webbplats, skapad för att förenkla din jobbsökning. Vi kombinerar kraften från två API:er för att erbjuda dig en unik tjänst där du kan hitta jobb på en karta och se avståndet från din nuvarande plats.</p>
+                <p>Genom att utnyttja front-end-teknologier, levererar vi en snabb och användarvänlig upplevelse. Vår plattform hjälper dig att enkelt hitta jobb som passar både dina kvalifikationer och geografiska önskemål.</p>
+                <p>Tack för att du använder vår tjänst. Vi hoppas att du hittar ditt nästa drömjobb med vår hjälp!</p>
+            </div>
+        </section>
+
+        <!-- Omdöme Sektion -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>Vad Våra Användare Säger</h2>
+                <div class="testimonials-boxes">
+                    <div class="testimonial">
+                        <p>"Den nya kartfunktionen har verkligen underlättat min jobbsökning. Jag kunde snabbt hitta jobb nära mig!"</p>
+                        <p>- Anna, Malmö</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Att kunna se var jobben ligger gör det mycket lättare att hitta rätt arbetsplats. Rekommenderas varmt!"</p>
+                        <p>- Erik, Stockholm</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"En fantastisk funktion som gör jobbsökningen mycket mer interaktiv och användarvänlig."</p>
+                        <p>- Maria, Göteborg</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Sektion -->
+    <footer class="footer">
+        <p>&copy; 2024 Workify. Alla rättigheter förbehållna.</p>
+        <p><a href="#about">Om Oss</a> | <a href="#testimonials">Omdöme</a> | <a href="findJobs.html">Hitta Jobb</a></p>
+    </footer>
+</body>
+
+</html>

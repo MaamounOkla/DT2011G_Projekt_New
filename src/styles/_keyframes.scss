@@ -1,0 +1,83 @@
+//Responsive nav slide up&down
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+// Keyframes for spinning loading animation
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+//Fade in för hamburgaremnenyn.
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.95;
+  }
+}
+// Fade Out för hamburgarmennyn.
+@keyframes fade-out {
+  from {
+    opacity: 0.95;
+  }
+  to {
+    opacity: 0;
+  }
+}
+//Kartmarkör animation 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(-5px);  
+  }
+}
+ 
+ //glida in från vänster och fade in
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(300px); 
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0);  
+    opacity: 1;  
+  }
+}
+//Cirkelmotion animation
+@keyframes circle-motion {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(0px, 5px);
+  }
+  50% {
+    transform: translate(5px, 5px);
+  }
+  75% {
+    transform: translate(5px, 0);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "dt2011g_projekt",
+  "version": "1.0.0",
+  "description": "En Mashup av två olika API:er i ett större sammanhangande projekt. ",
+  "source": "./src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "author": "Maamoun Okla",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0"
+  }
+}

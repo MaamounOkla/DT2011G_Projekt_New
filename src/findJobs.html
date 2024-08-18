@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobbsökning</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/main.js" type="module" defer></script>
+    <!-- Leaflet CSS för Karta -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Font Awesome Kit för ikoner-->
+    <script src="https://kit.fontawesome.com/580c2ac5ba.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav class="nav" id="nav">
+                <h1 class="logo">Workify</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="findJobs.html">Sök jobb  </a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Jobbsökning Sektion -->
+        <section class="find-job-container">
+            <div class="container">
+                <h2>Jobbsökning</h2>
+                <p>Skriv t.ex. webbutvecklare</p>
+                <input type="text" id="searchBox" placeholder="Sök jobb...">
+                <button id="searchButton">Sök <i class="circle-animation fa-solid fa-magnifying-glass"></i></button>
+                <div id="results" class="results"></div>
+                <button id="loadMore" style="display:none;">Ladda fler</button>
+                <div class="loading-container" style="display: none;">
+                    <div class="loading-circle"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Workify. Alla rättigheter förbehållna.</p>
+        <p><a href="#about">Om Oss</a> | <a href="#testimonials">Omdöme</a> | <a href="findJobs.html">Hitta Jobb</a></p>
+    </footer>
+</body>
+
+</html>

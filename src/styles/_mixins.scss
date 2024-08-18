@@ -1,0 +1,25 @@
+@use "base";
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-center-vertical{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@mixin flex-left-vertical{
+ 
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+}
+@mixin responsive-text($size-small, $size-large) {
+  font-size: base.$font-size-small;
+
+  @media (min-width: 768px) {
+    font-size: base.$font-size-large;
+  }
+}

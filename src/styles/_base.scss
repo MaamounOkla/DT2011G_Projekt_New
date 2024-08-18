@@ -1,0 +1,33 @@
+// Färger för bakgrund
+$background-color: #fff;
+$container-background: #00005A;
+
+// Färger för knappar
+$button-background: #ABFF5C;
+$button-secondary-background: #b8fc78;
+
+// Färger för border och skugga
+$border-color: #ddd;
+$shadow-color: rgba(212, 228, 255, 0.782);
+$shadow-color-secondary: #f5e173;
+
+// Textfärger
+$text-color-primary: #fff;
+$text-color-secondary: #000917;
+ 
+
+// Färger
+$primary-color: #eff8ff;
+$secondary-color: rgb(8, 0, 53);
+
+// Textfärger
+$text-color: #1e1616;
+$secondary-text-color: #3d3d3d;
+
+// Darken och Lighten funktioner
+$darker-primary: darken($primary-color, 10%);
+$lighter-secondary: lighten($secondary-color, 20%);
+
+// Fontstorlekar
+$font-size-small: 100%;
+$font-size-large: 120%;
